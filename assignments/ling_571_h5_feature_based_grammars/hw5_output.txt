@@ -1,0 +1,24 @@
+(S[-INV] (NP[AGR=[NUM='pl']] (Det[AGR=[NUM=?n]] the) (Noun[AGR=[NUM='pl']] dogs)) (VP[AGR=[NUM='pl', TENSE='pres']] (V[AGR=[NUM='pl', TENSE='pres'], SUBCAT='intrans'] bark)))
+(S[-INV] (NP[AGR=[NUM='sg']] (Det[AGR=[NUM=?n]] the) (Noun[AGR=[NUM='sg']] dog)) (VP[AGR=[NUM='sg', TENSE='pres']] (V[AGR=[NUM='sg', TENSE='pres'], -AUX, SUBCAT='intrans'] barks)))
+ 
+ 
+ 
+(S[-INV] (NP[AGR=[NUM='pl']] (Noun[AGR=[NUM='pl']] dogs)) (VP[AGR=[NUM='pl', TENSE='pres']] (V[AGR=[NUM='pl', TENSE='pres'], SUBCAT='intrans'] bark)))
+ 
+(S[-INV] (NP[AGR=[NUM=?n2], GND='masc'] (PropN[AGR=[NUM=?n], GND='masc', PER=3] John)) (VP[AGR=[NUM='sg', TENSE='past']] (V[AGR=[NUM='sg', TENSE='past'], SUBCAT='clause'] thought) (SBar[AGR=?a] (Comp[GEN=?a] that) (S[-INV] (NP[AGR=[NUM='sg']] (Det[AGR=[NUM=?n]] the) (Noun[AGR=[NUM='sg']] book)) (VP[AGR=[NUM='sg', TENSE='past']] (V[AGR=[NUM='sg', TENSE='past'], SUBCAT='intrans'] was) (Adj[GEN=?a] interesting))))))
+ 
+ 
+(S[-INV] (NP[AGR=[NUM=?n2], GND='fem'] (PropN[AGR=[NUM=?n], GND='fem', PER=3] Mary)) (VP[AGR=[NUM='sg', TENSE='past']] (V[AGR=[NUM='sg', TENSE='past'], SUBCAT='ditrans', +aspect_instant, -aspect_over_time] put) (NP[AGR=[NUM='sg']] (Det[AGR=[NUM=?n]] the) (Noun[AGR=[NUM='sg']] book)) (PP[AGR=?a, -aspect_over_time] (Prep[EVENT='ach', NUM=?n, TENSE=?t, +aspect_instant] on) (NP[AGR=[NUM='sg']] (Det[AGR=[NUM=?n]] the) (Noun[AGR=[NUM='sg']] shelf)))))
+(S[+INV] (V[AGR=[NUM='sg', TENSE='past'], +AUX, +INV] did) (NP[AGR=[NUM=?n2], GND='fem'] (PropN[AGR=[NUM=?n], GND='fem', PER=3] Mary)) (VP[AGR=[NUM='sg', TENSE='past']] (V[AGR=[NUM='sg', TENSE='past'], SUBCAT='ditrans', +aspect_instant, -aspect_over_time] put) (NP[AGR=[NUM='sg']] (Det[AGR=[NUM=?n]] the) (Noun[AGR=[NUM='sg']] book)) (PP[AGR=?a, -aspect_over_time] (Prep[EVENT='ach', NUM=?n, TENSE=?t, +aspect_instant] on) (NP[AGR=[NUM='sg']] (Det[AGR=[NUM=?n]] the) (Noun[AGR=[NUM='sg']] shelf)))))
+ 
+(S[-INV] (WDT[AGR=[NUM=?n]] what) (V[AGR=[NUM='sg', TENSE='past'], +AUX, +INV] did) (NP[AGR=[NUM=?n2], GND='fem'] (PropN[AGR=[NUM=?n], GND='fem', PER=3] Mary)) (VP[AGR=[NUM='sg', TENSE='past']] (V[AGR=[NUM='sg', TENSE='past'], SUBCAT='ditrans', +aspect_instant, -aspect_over_time] put) (PP[AGR=?a, +aspect_over_time] (Prep[EVENT='ach', NUM=?n, TENSE=?t, +aspect_instant] on) (NP[AGR=[NUM='sg']] (Det[AGR=[NUM=?n]] the) (Noun[AGR=[NUM='sg']] shelf)))))
+ 
+(S[-INV] (WDT[AGR=[NUM=?n]] what) (V[AGR=[NUM='sg', TENSE='pres'], +AUX, -INV, PER=3] does) (NP[AGR=[NUM=?n2], GND='masc'] (PropN[AGR=[NUM=?n], GND='masc', PER=3] John)) (VP[AGR=[NUM='sg', TENSE='pres']] (V[AGR=[NUM='sg', TENSE='pres'], -AUX, SUBCAT='intrans'] know)))
+(S[-INV] (WDT[AGR=[NUM=?n]] what) (V[AGR=[NUM='sg', TENSE='pres'], +AUX, -INV, PER=3] does) (NP[AGR=[NUM=?n2], GND='fem'] (PropN[AGR=[NUM=?n], GND='fem', PER=3] Mary)) (VP[AGR=[NUM='sg', TENSE='pres'], GND=?g] (V[AGR=[NUM='sg', TENSE='pres'], -AUX, SUBCAT='trans'] think) (NP[AGR=[NUM='sg', TENSE='pres']] (NP[AGR=[NUM=?n2], GND='masc'] (PropN[AGR=[NUM=?n], GND='masc', PER=3] John)) (V[AGR=[NUM='sg', TENSE='pres'], -AUX, +LGD, PER=3, SUBCAT='trans'] knows))))
+(S[-INV] (NP[AGR=[NUM=?n2], GND='fem'] (PropN[AGR=[NUM=?n], GND='fem', PER=3] Mary)) (VP[AGR=[NUM='sg', TENSE='past'], GND='fem'] (V[AGR=[NUM=?n, TENSE='past'], SUBCAT='trans', +aspect_instant, +aspect_over_time] saw) (NP[AGR=[NUM='sg'], GND='fem'] (Pro[AGR=[NUM='sg'], GND='fem', PER=3, +reflex] herself))))
+ 
+(S[-INV] (NP[AGR=[NUM=?n2], GND='masc'] (PropN[AGR=[NUM=?n], GND='masc', PER=3] John)) (VP[AGR=[NUM='sg', TENSE='past'], GND='masc'] (V[AGR=[NUM=?n, TENSE='past'], SUBCAT='trans', +aspect_instant, +aspect_over_time] saw) (NP[AGR=[NUM='sg'], GND='masc'] (Pro[AGR=[NUM='sg'], GND='masc', PER=3, +reflex] himself))))
+(S[-INV] (NP[AGR=[NUM=?n2], GND='masc'] (PropN[AGR=[NUM=?n], GND='masc', PER=3] John)) (VP[AGR=[NUM='sg', TENSE='past']] (V[AGR=[NUM='sg', TENSE='past'], SUBCAT='ditrans', +aspect_instant, -aspect_over_time] reached) (NP[AGR=[NUM='sg']] (Det[AGR=[NUM=?n]] the) (Noun[AGR=[NUM='sg']] summit)) (PP[AGR=?a, -aspect_over_time] (Prep[EVENT='ach', NUM=?n, TENSE=?t, +aspect_instant] on) (NP[AGR=[NUM='sg'], GND='neutral'] (PropN[AGR=[NUM='sg'], GND='neutral'] Tuesday)))))
+ 
+(S[-INV] (NP[AGR=[NUM=?n2], GND='masc'] (PropN[AGR=[NUM=?n], GND='masc', PER=3] John)) (VP[AGR=[NUM=?n2, TENSE='past']] (V[AGR=[NUM=?n, TENSE='past'], SUBCAT='trans', +aspect_instant, +aspect_over_time] walked) (PP[AGR=?a, +aspect_over_time] (Prep[EVENT='ach', NUM=?n, TENSE=?t, +aspect_instant] on) (NP[AGR=[NUM='sg'], GND='neutral'] (PropN[AGR=[NUM='sg'], GND='neutral'] Tuesday)))))
+(S[-INV] (NP[AGR=[NUM=?n2], GND='fem'] (PropN[AGR=[NUM=?n], GND='fem', PER=3] Mary)) (VP[AGR=[NUM=?n2, TENSE='past']] (V[AGR=[NUM=?n, TENSE='past'], SUBCAT='trans', +aspect_instant, +aspect_over_time] walked) (PP[AGR=?a, +aspect_over_time] (Prep[EVENT='act', NUM=?n, TENSE=?t, +aspect_over_time] for) (NP[AGR=[NUM='pl']] (CD[AGR=[NUM='pl']] five) (Noun[AGR=[NUM='pl']] minutes)))))

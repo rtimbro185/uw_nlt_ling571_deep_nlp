@@ -1,0 +1,55 @@
+List the flights from Baltimore to Seattle that stop in Minneapolis .
+I need to arrive at Charlotte at around five p.m .
+What are the flights from Milwaukee to Tampa ?
+What about in Indianapolis ?
+I would like to travel from Indianapolis to Houston .
+I would like to travel to Westchester .
+List American Airlines flights from New York Newark to Nashville .
+What flights are there from Nashville to Houston tomorrow evening that serve dinner ?
+I 'd like to fly next Friday .
+Which of those are nonstop ?
+I want a flight from Ontario to Chicago .
+What about Monday afternoon ?
+Show me the dinner flights from Baltimore to Oakland .
+Which of these are dinner flights ?
+How many fares are there one way from Tacoma to Montreal ?
+Show me the first flight that arrives in Toronto from Cincinnati .
+Is United Airlines flight four thirty a nonstop flight ?
+Show me the nonstop nonstop flights from Nashville to Saint Louis .
+What flights are there from Phoenix to Milwaukee ?
+What flights leave from Nashville to Phoenix ?
+What flights are there from Charlotte to Baltimore ?
+What flights are there from New York City to Las Vegas ?
+Arriving before four p.m .
+Flights from Newark to Tampa on Friday on U S Air .
+Show afternoon flights from Houston to Dallas .
+Show me flights arriving within thirty minutes of each other .
+Monday around noon .
+Flights after twelve hundred hours .
+Friday night .
+From Atlanta to Washington D C .
+What flights from Las Vegas to San Diego .
+What flights from Houston to Milwaukee on Friday on American Airlines .
+What is the price ?
+What flights from Las Vegas to Phoenix on Saturday .
+What restrictions on fare code Q .
+What is the price ?
+Flights from Kansas City to Cleveland on Wednesday before five p.m .
+Flight from Cleveland to Nashville .
+Flights from Ontario to Orlando .
+Cheapest flight from Miami to Indianapolis .
+Which of those leaves either Wednesday or Thursday ?
+Traveling first class .
+Return flight number .
+Show business class fares .
+Cheapest fare .
+Ground transportation in Las Vegas .
+Return flight numbers .
+Show me Ground transportation in Denver during weekdays .
+Newark to Cleveland daily .
+Flights from La Guardia or J F K to Cleveland .
+All flights from Montreal less than one hundred fifty dollars .
+Show me all flights that depart before ten a.m and have first class .
+Show me the fares .
+Show me the meals on Southwest Airlines .
+Show me the flights from Dulles International to San Diego with one stop in Los Angeles .

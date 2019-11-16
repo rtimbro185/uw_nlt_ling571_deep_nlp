@@ -1,0 +1,51 @@
+timbrr -- Ryan Timbrook -- HW5 -- Building a Feature-based Grammar -- 100%
+
+-- Great job. From your write-up:
+
+"With my newness in the study of computational linguistics, features are the first concept that have started to
+resonate within me. I'm beginning to feel I can visualize, just scratching the surface in understand the many
+complications and layers that go into parsing textual information in an effort to gain some kind of meaning."
+
+"Each time I reworked my grammar rules to try implementing a new feature concept I had read about in the documentation,
+or NLTK book it would have negative effects on the structures I had in place that were covering the more simplistic
+sentence formats. "
+
+-- these are great insights and pervasive to the field of rule-based NLP. Perhaps writing complex grammars is most analagous
+to whack-a-mole...
+
+Grammar
+  ‹2/2› file named 'hw5_feature_grammar.fcfg'; grammar is in NLTK .fcfg format
+‹10/10› Grammar is well organized, concise, elegant. Good preterminal structure (clause/phrase types) and lexical entry layout
+‹10/10› Use of features: logical, well-motivated; captures good linguistic generalizations
+  
+Programming
+  ‹2/2› source code provided, named "hw5_parser.{py|cs|java|etc}"
+  ‹2/2› command line compatible with "hw5_parser.{py|pl|etc} <input_grammar_filename> <input_sentence_filename> <output_filename>"
+  ‹8/8› successfuly loads grammar using nltk.data.load
+  ‹6/6› load the test sentences file and enumerate over all 25 test sentences to produce a parse or rejection
+  ‹8/8› parse or reject all with nltk.parse.FeatureEarlyChartParser or similar
+
+Parsing details -- for each example sentence
+  ‹5/5› print exactly one parse for grammatical sentences
+  ‹5/5› leave blank line for sentences that don't parse (file has 25 lines)
+
+Output/Correctness
+  ‹2/2› named 'hw5_output.txt'
+  ‹2/2› running the program recreates identical results to the submitted output file
+‹10/10› Features work correctly with parser to effectively constrain (e.g.) PER,NUM,GEND,TENSE,ASPECT,etc.
+
+Write-up
+  ‹2/2› named "readme.{txt|pdf}"
+‹10/10› Clarity
+‹10/10› Detail
+
+Condor 
+  ‹2/2› works properly and command line is "$ condor_submit hw5.cmd"
+  ‹2/2› "All files created by the condor run should appear in the top level of the directory"
+
+Hand-in archive
+  ‹2/2› named "hw5.tar"
+
+Extra-credit
+  ‹0/0› working implementation of subcategorization using (i.e.) FIRST/REST style pseudo-lists
+  

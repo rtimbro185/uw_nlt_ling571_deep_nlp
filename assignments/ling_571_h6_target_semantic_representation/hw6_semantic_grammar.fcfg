@@ -1,0 +1,79 @@
+## LING 571 - HW6 - CFG Rules Augmented with semantic attachments
+## Format - fcfg
+## Author: Ryan Timbrook
+## Date: 02/16/2016
+
+
+% start S
+# ###################
+# Grammar Productions
+# ###################
+
+# S expansion productions
+S[SEM=<?subj(?vp)>] -> NP[SEM=?subj] VP[SEM=?vp]
+
+
+VP[SEM=?v] -> IV[SEM=?v]
+VP[SEM=<?tv(?np)>] -> TV[SEM=?tv] NP[SEM=?np]
+VP[SEM=<\x.(?vp1(x) | ?vp2(x))>] -> VP[SEM=?vp1] CONJ_Or VP[SEM=?vp2]
+VP[SEM=<?dp(?np)>] -> DP[SEM=?dp] NP[SEM=?np]
+NP[SEM=<\x.(?np1(x) | ?np2(x))>] -> NP[SEM=?np1] CONJ_Or NP[SEM=?np2]
+
+NP[SEM=<?det(?n)>] -> Det[SEM=?det] Nominal[SEM=?n]
+NP[SEM=<?negat(?n)>] -> NEGAT[SEM=?negat] Nominal[SEM=?n]
+NP[SEM=?n] -> Noun[SEM=?n]
+NP[SEM=?propn] -> PropN[SEM=?propn]
+NP[SEM=<\x.-?neg_pron(x)>] -> NegProN[SEM=?neg_pron]
+Nominal[SEM=?n] -> Noun[SEM=?n]
+Noun[SEM=<\x.(?n1(x) | ?n2(x))>] -> Noun[SEM=?n1] CONJ_Or Noun[SEM=?n2]
+
+DP[SEM=<?v(?negat)>] -> V[SEM=?v] NEGAT[SEM=?negat]
+
+# ###################
+# Lexical Productions
+# ###################
+
+
+### Person Nouns ###
+PropN[NUM=sg, SEM=<\P.P(John)>] -> 'John'
+PropN[NUM=sg, SEM=<\P.P(Jack)>] -> 'Jack'
+PropN[NUM=sg, SEM=<\P.P(Mary)>] -> 'Mary'
+Noun[NUM=sg, SEM=<\p.Person(p)>] -> 'person'
+Noun[NUM=sg, SEM=<\s.Student(s)>] -> 'student'
+Noun[NUM=pl, SEM=<\s.Student(s)>] -> 'students'
+NegProN[NUM=pl, SEM=<\P.x\.Person(p)>] -> 'nobody'
+### Food Nouns ###
+Noun[NUM=sg, SEM=<\b.Bagel(b)>] -> 'bagel'
+Noun[NUM=sg, SEM=<\s.Soda(s)>] -> 'soda'
+Noun[NUM=sg, SEM=<\s.Sandwich(s)>] -> 'sandwich'
+### Other Nouns ###
+Noun[NUM=sg, SEM=<\e.Essay(e)>] -> 'essay'
+Noun[NUM=pl, SEM=<\e.Essay(e)>] -> 'essays'
+### Verb Events ###
+IV[-LIQUID, +SOLID, NUM=sg, TNS=pres, SEM=<\x.exists e.(eating(e) & eater(e,x))>] -> 'eats'
+IV[-LIQUID, +SOLID, NUM=pl, TNS=pres, SEM=<\x.exists e.(eating(e) & eater(e,x))>] -> 'eat'
+IV[+LIQUID, -SOLID, NUM=sg, TNS=pres, SEM=<\x.exists e.(drinking(e) & drinker(e,x))>] -> 'drinks'
+IV[+LIQUID, -SOLID, NUM=sg, TNS=pres, SEM=<\x.exists e.(drinking(e) & drinker(e,x))>] -> 'drink'
+IV[+HUMAN, -LIQUID, -SOLID, NUM=sg, TNS=pres, SEM=<\x.exists e.(writing(e) & writer(e,x))>] -> 'writes'
+IV[+HUMAN, -LIQUID, -SOLID, NUM=pl, TNS=pres, SEM=<\x.exists e.(writing(e) & writer(e,x))>] -> 'write'
+
+TV[-LIQUID, +SOLID, NUM=sg, TNS=pres, SEM=<\Q.\x.Q(\y.exists e.(eating(e) & eater(e,x) & eat_thing(e,y)))>] -> 'eats'
+TV[-LIQUID, +SOLID, NUM=pl, TNS=pres, SEM=<\Q.\x.Q(\y.exists e.(eating(e) & eater(e,x) & eat_thing(e,y)))>] -> 'eat'
+TV[+LIQUID, +SOLID, NUM=sg, TNS=pres, SEM=<\Q.\x.Q(\y.exists e.(drinking(e) & drinker(e,x) & drink_thing(e,y)))>] -> 'drinks'
+TV[+LIQUID, +SOLID, NUM=pl, TNS=pres, SEM=<\Q.\x.Q(\y.exists e.(drinking(e) & drinker(e,x) & drink_thing(e,y)))>] -> 'drink'
+TV[+HUMAN, -LIQUID, -SOLID, NUM=sg, TNS=pres, SEM=<\Q.\x.Q(\y.exists e.(writing(e) & writer(e,x) & write_thing(e,y)))>] -> 'writes'
+TV[+HUMAN, -LIQUID, -SOLID, NUM=pl, TNS=pres, SEM=<\Q.\x.Q(\y.exists e.(writing(e) & writer(e,x) & write_thing(e,y)))>] -> 'write'
+
+V[+AUX, NUM=sg, TENSE=pres, SEM=<\x.P(x)>] -> 'does'
+
+### Determiners ###
+Det[NUM=sg, SEM=<\Q P.exists x.(Q(x) & P(x))>] -> 'a' | 'an'
+Det[NUM=pl, SEM=<\Q P.all x.(Q(x) -> P(x))>] -> 'all'
+Det[NUM=sg, SEM=<\Q P.all x.(Q(x) -> P(x))>] -> 'every'
+
+### Conjunctions ###
+CONJ_Or[SEM=<\P.P(|)>] -> 'or'
+NEGAT[NUM=?n, SEM=<\Q P.all x.(-Q(x) -> P(x))>] -> 'no'
+NEGAT[NUM=?n, SEM=<\Q P.exists x.(-Q(x) & P(x))>] -> 'not'
+
+

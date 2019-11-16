@@ -1,0 +1,74 @@
+
+Ling 571 - Deep Processing Techniques for NLP
+Winter 2017 
+Homework #9: Due March 10, 2017: 23:45 
+
+Goals
+Through this assignment you will:
+	• Explore issues in pronominal anaphora resolution.
+	• Gain familiarity with syntax-based resolution techniques.
+	• Analyze the effectiveness of the Hobbs algorithm by applying it to pairs of parsed sentences.
+	• Optionally: Implement the Hobbs algorithm for anaphora resolution on a set of sentences.
+Background
+Please review the class slides (esp. Class 15: #19, #20 (detail)) and readings in the textbook on pronominal anaphora resolution and especially the Hobbs algorithm (J&M, 2nd ed, p. 704-705).
+Analyzing Coreference Resolution with the Hobbs Algorithm
+The Hobbs algorithm takes as input a pronoun and a sequence of sentence parse trees in the context, and returns the proposed antecedent. The data file contains a list of pairs of sentences separated by blank lines. In each pair of the sentences, the second sentence has one or more pronouns to be resolved. Parse the sentences, almost all of which are drawn from the first homework assignment, using the same techniques as in HW#1 (or HW#5 if you want to handle number agreement).
+For each pronoun, in each sentence pair, trace the Hobbs algorithm to identify its antecedent.
+Specifically, you should:
+	• i) Read in your grammar.
+	• ii) Read in the file of sentence pairs with pronouns to resolve.
+	• iii) For each (pronoun, sentence pair) set:
+		○ a) Parse the sentences with your grammar.
+		○ b) Print out the pronoun and the corresponding parses.
+		○ Use the Hobbs algorithm to (attempt to) resolve the pronoun in the context.
+			§ A) identify each parse tree node corresponding to 'X' in the algorithm, writing out the corresponding NP or S (or SBAR) constituent.
+			§ B) identify each node proposed as an antecedent
+			§ C) reject any proposed node ruled out by agreement
+			§ D) identify the accepted antecedent.
+		○ E) indicate whether the accepted antecedent is correct
+			§ F1) If the accepted antecedent is correct, do nothing more
+			§ F2) If the accepted antecedent is NOT correct, explain why and identify which of the syntactic and semantic preferences listed in the text (Slides: class 15: 15, 16) would be required to correct this error.
+"Implementation"
+You should implement steps i-iii.b) using NLTK and a suitable parser. You may do steps A-D either:
+	• by manually stepping through the algorithm, or
+	• (for additional credit) by implementing this simplified portion of the algorithm. If you take this coding route, you may use a feature grammar or a simple look-up table to filter for agreement. You may use any supporting software, such as NLTK's components for manipulating parse trees, that you wish, provided it does not implement the full Hobbs algorithm for you.
+Steps E-F* should be done manually.
+Note: Manual processing should be done on a copy of the output of automatic processing.
+Programming
+Create a program hw9_coref.{py|pl|etc} to implement the automatic processing components of the pronominal anaphora resolution process described above invoked as:
+hw9_coref.{py|pl|etc} <input_grammar_filename> <test_sentence_filename> <output_filename>
+where:
+	• <input_grammar_filename>: The name of the file that holds the grammar to be used to parse the sentences. This should be a legal NLTK CFG grammar (with or without features).
+	• <test_sentence_filename>: The name of the file that holds the pairs of sentences that form contexts for pronoun resolution. Each sentence appears on a line by itself, with a blank between pairs of sentences. The second sentence of each pair contains one or more pronouns to resolve.
+	• <output_filename>: The name of the file to which the results of automatic processing for this assignment will be written, either:
+		○ Parsing and pronoun identification only, or
+		○ Parsing through candidate antecedent identification
+Files
+The files for this assignment may be found on patas in /dropbox/16-17/571/hw9/.
+Test, Example, and Resource Files
+	• coref_sentences.txt: Contains the contexts to analyze. You should resolve the pronoun(s) in the second sentence in each pair based on the context provided by the pair of sentences.
+	• simple_example_sentences.txt: Contains a set of example sentence pairs with pronouns to be resolved.
+	• simple_example_output.txt: Contains an application to a simplified parse of a textbook example. This is intended to provide an example of the process and output format.
+	• grammar.cfg: Contains a simple grammar that covers the test sentences and is fairly compatible with the Hobbs algorithm in the text (minor changes may be made). You may also use the grammar from HW #1 (with adaptations to the algorithm as needed).
+Submission Files
+	• hw9_coref.{py|pl|etc}: Program which implements the automatic processing phase of your Hobbs algorithm-based pronoun resolution approach.
+	• hw9_output.txt: Output of running your program with your grammar and the test sentences, through the automatic processing stages.
+	• hw9_output_final.txt: This file should contain the augmented analysis based on the contents of hw9_output.txt.
+		○ For the manual case, this is steps A-F(1,2)
+		○ For the coding case, this is steps E-F(1,2)
+	• hw9.cmd: Condor file which drives your coreference resolution program (hw9_coref.{py|pl|etc}).
+		○ Your program must run on patas using:
+$ condor_submit hw9.cmd
+Please see the CLMS wiki pages on the basics of using the condor cluster.
+All files created by the condor run should appear in the top level of the directory.
+	• readme.{txt|pdf}: Write-up file
+		○ This file should describe and discuss your work on this assignment. Include problems you came across and how (or if) you were able to solve them, any insights, special features, and what you learned. Give examples if possible. If you were not able to complete parts of the project, discuss what you tried and/or what did not work. This will allow you to receive maximum credit for partial work.
+In particular, you should discuss the successes and failures of the algorithm in resolving these pronouns in context.
+	• hw9.tar: Your hand-in file
+		○ Use the tar command to build a single hand-in file, named hw#.tar where # is the number of the homework assignment and containing all the material necessary to test your assignment. Your hw9.cmd should be at the top level of whatever directory structure you are using.
+For example, in your top-level directory, run:
+$ tar cvf hw9.tar *
+Handing in your work
+All homework should be handed in using the class CollectIt.
+
+From <http://courses.washington.edu/ling571/ling571_WIN2017/hw/hw9/hw9.html> 

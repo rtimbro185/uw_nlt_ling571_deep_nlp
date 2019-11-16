@@ -1,0 +1,15 @@
+John eats
+a student eats
+all students eat
+John eats a sandwich
+all students eat or drink
+John drinks a soda or eats a sandwich
+John or Mary eats
+a student writes an essay or eats
+every student eats a sandwich or drinks a soda
+John eats every sandwich 
+John eats every sandwich or bagel
+nobody eats a bagel
+a person does not eat
+Jack does not eat or drink 
+no student eats a bagel

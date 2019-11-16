@@ -1,0 +1,55 @@
+They (S (NP (Nom (NNS Scientists))) (VP (VBD rescued) (NP (Det a) (Nom (Nom (NN mouse)) (Nom (ADJP (Adj immune)) (Nom (NN system)))))) (PUNC .))   (S (NP (PRP They)) (VP (VP (VP (VBD published) (NP (Det the) (Nom (NN research)))) (ADVP (Adv today))) (ADVP (Adv online))) (PUNC .))
+(S (NP (PRP They)) (VP (VP (VP (VBD published) (NP (Det the) (Nom (NN research)))) (ADVP (Adv today))) (ADVP (Adv online))) (PUNC .))
+(S (NP (Nom (NNS Scientists))) (VP (VBD rescued) (NP (Det a) (Nom (Nom (NN mouse)) (Nom (ADJP (Adj immune)) (Nom (NN system)))))) (PUNC .))
+(NP (Nom (NNS Scientists)))
+Accept
+Correct
+
+They (S (NP (Det The) (Nom (ADJP (Adj immune)) (Nom (NN response)))) (VP (AUX (AuxZ is)) (VP (VBN alerted) (PP (Prep by) (NP (Nom (ADJP (Adj dendritic)) (Nom (NNS cells))))))) (PUNC .))   (S (NP (PRP They)) (VP (VP (VBP capture) (NP (Nom (ADJP (Adj infected)) (Nom (NNS cells))))) (Conj and) (VP (VBP display) (NP (Nom (Nom (NNS fragments)) (PP (Prep of) (NP (Det the) (Nom (NN pathogen)))))))) (PUNC .))
+(S (NP (PRP They)) (VP (VP (VBP capture) (NP (Nom (ADJP (Adj infected)) (Nom (NNS cells))))) (Conj and) (VP (VBP display) (NP (Nom (Nom (NNS fragments)) (PP (Prep of) (NP (Det the) (Nom (NN pathogen)))))))) (PUNC .))
+(S (NP (Det The) (Nom (ADJP (Adj immune)) (Nom (NN response)))) (VP (AUX (AuxZ is)) (VP (VBN alerted) (PP (Prep by) (NP (Nom (ADJP (Adj dendritic)) (Nom (NNS cells))))))) (PUNC .))
+(NP (Det The) (Nom (ADJP (Adj immune)) (Nom (NN response))))
+Reject - Gender
+(NP (Nom (ADJP (Adj dendritic)) (Nom (NNS cells))))
+Reject - Grammatical Role Violation
+Incorrect - It was rejected by the automated algorithm based on saliency. The application recognized 'cells' as being the Object of the sentence where the pronoun 'They' was looking for the subject.
+(NP (Nom (ADJP (Adj dendritic)) (Nom (NNS cells))))
+Reject - Grammatical Role Violation
+Incorrect - This proposition should not have printed a second time; error in the automated algorithm
+(NP (Nom (ADJP (Adj dendritic)) (Nom (NNS cells))))
+Reject - Grammatical Role Violation
+Incorrect - This proposition should not have printed a third time; error in the automated algorithm
+
+They (S (NP (Nom (NNS Scientists))) (VP (VBD rescued) (NP (Det a) (Nom (Nom (NN mouse)) (Nom (ADJP (Adj immune)) (Nom (NN system)))))) (PUNC .))   (S (NP (PRP They)) (VP (VBD restored) (NP (Nom (Nom (NN immunity)) (PP (Prep in) (NP (Nom (NNS mice)))))) (PP (Prep with) (NP (Det a) (Nom (ADJP (Adj weak) (ADJP (Adj immune))) (Nom (NN system)))))) (PUNC .))
+(S (NP (PRP They)) (VP (VBD restored) (NP (Nom (Nom (NN immunity)) (PP (Prep in) (NP (Nom (NNS mice)))))) (PP (Prep with) (NP (Det a) (Nom (ADJP (Adj weak) (ADJP (Adj immune))) (Nom (NN system)))))) (PUNC .))
+(S (NP (Nom (NNS Scientists))) (VP (VBD rescued) (NP (Det a) (Nom (Nom (NN mouse)) (Nom (ADJP (Adj immune)) (Nom (NN system)))))) (PUNC .))
+(NP (Nom (NNS Scientists)))
+Accept
+Correct
+
+They (S (NP (Nom (NNS Scientists))) (VP (VBD restored) (NP (Nom (Nom (NN immunity)) (PP (Prep in) (NP (Nom (NNS mice)))))) (PP (Prep with) (NP (Det a) (Nom (ADJP (Adj weak) (ADJP (Adj immune))) (Nom (NN system)))))) (PUNC .))   (S (NP (PRP They)) (VP (VBD injected) (NP (PRP them)) (PP (Prep with) (NP (Det a) (Nom (ADJP (Adj live)) (Nom (NN vaccine)))))) (PUNC .))
+(S (NP (PRP They)) (VP (VBD injected) (NP (PRP them)) (PP (Prep with) (NP (Det a) (Nom (ADJP (Adj live)) (Nom (NN vaccine)))))) (PUNC .))
+(S (NP (Nom (NNS Scientists))) (VP (VBD restored) (NP (Nom (Nom (NN immunity)) (PP (Prep in) (NP (Nom (NNS mice)))))) (PP (Prep with) (NP (Det a) (Nom (ADJP (Adj weak) (ADJP (Adj immune))) (Nom (NN system)))))) (PUNC .))
+(NP (Nom (NNS Scientists)))
+Accept
+Correct
+them (S (NP (Nom (NNS Scientists))) (VP (VBD restored) (NP (Nom (Nom (NN immunity)) (PP (Prep in) (NP (Nom (NNS mice)))))) (PP (Prep with) (NP (Det a) (Nom (ADJP (Adj weak) (ADJP (Adj immune))) (Nom (NN system)))))) (PUNC .))   (S (NP (PRP They)) (VP (VBD injected) (NP (PRP them)) (PP (Prep with) (NP (Det a) (Nom (ADJP (Adj live)) (Nom (NN vaccine)))))) (PUNC .))
+(S (NP (PRP They)) (VP (VBD injected) (NP (PRP them)) (PP (Prep with) (NP (Det a) (Nom (ADJP (Adj live)) (Nom (NN vaccine)))))) (PUNC .))
+(S (NP (Nom (NNS Scientists))) (VP (VBD restored) (NP (Nom (Nom (NN immunity)) (PP (Prep in) (NP (Nom (NNS mice)))))) (PP (Prep with) (NP (Det a) (Nom (ADJP (Adj weak) (ADJP (Adj immune))) (Nom (NN system)))))) (PUNC .))
+(NP (Nom (NNS Scientists)))
+Reject - Grammatical Role Violation
+(NP (Nom (Nom (NN immunity)) (PP (Prep in) (NP (Nom (NNS mice))))))
+Reject - Gender
+(NP (Nom (NNS mice)))
+Accept
+Correct
+
+They (S (NP (Nom (NNS Scientists))) (VP (VBD restored) (NP (Nom (Nom (NN immunity)) (PP (Prep in) (NP (Nom (NNS mice)))))) (PP (Prep with) (NP (Det a) (Nom (ADJP (Adj weak) (ADJP (Adj immune))) (Nom (NN system)))))) (PUNC .))   (S (NP (PRP They)) (VP (AUX (AuxZ were)) (VP (VBN compromised) (PP (Prep by) (NP (Nom (NN sepsis)))))) (PUNC .))
+(S (NP (PRP They)) (VP (AUX (AuxZ were)) (VP (VBN compromised) (PP (Prep by) (NP (Nom (NN sepsis)))))) (PUNC .))
+(S (NP (Nom (NNS Scientists))) (VP (VBD restored) (NP (Nom (Nom (NN immunity)) (PP (Prep in) (NP (Nom (NNS mice)))))) (PP (Prep with) (NP (Det a) (Nom (ADJP (Adj weak) (ADJP (Adj immune))) (Nom (NN system)))))) (PUNC .))
+(NP (Nom (NNS Scientists)))
+Accept
+Incorrect - Role; however by basic agreement and syntactic constraints it's correct. It appears quite ambiguous and with minimal conditions applied it's expected.
+(NP (Nom (NNS mice)))
+Correct
+

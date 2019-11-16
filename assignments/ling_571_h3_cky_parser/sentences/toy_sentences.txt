@@ -1,0 +1,3 @@
+the cat chased the dog
+a dog chased a cat
+the dog chased a cat on the mat

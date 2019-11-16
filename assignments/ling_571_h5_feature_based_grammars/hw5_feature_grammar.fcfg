@@ -1,0 +1,91 @@
+## LING-571-HW5: hw5_feature_grammar.fcfg
+## Note: All sentences from the test sentences.txt parse excluding those marked as ill formed on the key.
+##       -One sentence, "What did Mary put on the shelf?" has two parses. In respects to time, I'm submitting
+##          this assignment with that one error.
+
+% start S
+# ###################
+# Grammar Productions
+# ###################
+
+# S expansion productions
+S[-INV] -> NP[AGR=?a, GND=?g] VP[AGR=?a, GND=?g]
+S[-INV] -> WDT[AGR=?a] V[+AUX, AGR=?a] NP[AGR=?a] VP[AGR=?a]
+S[+INV] -> V[+AUX, AGR=?a] NP[AGR=?a] VP[AGR=?a]
+
+
+NP[AGR=?a] -> Det[AGR=?a] Noun[AGR=?a]
+NP[AGR=?a] -> Noun[AGR=?a]
+NP[AGR=?a] -> PropN[-GND, AGR=?a]
+NP[GND=?g, AGR=?a] -> PropN[GND=?g, AGR=?a]
+NP[GND=?g, AGR=?a] -> Pro[+reflexive, GND=?g, AGR=?a]
+NP[AGR=?a] -> CD[AGR=?a] Noun[AGR=?a]
+NP[AGR=?a] -> NP[AGR=?a] V[+LGD, -AUX, SUBCAT=trans, AGR=?a]
+
+VP[AGR=?a] -> V[SUBCAT=intrans, AGR=?a]
+VP[AGR=?a, GND=?g] -> V[SUBCAT=trans, AGR=?a] NP[+reflex, AGR=?a, GND=?g]
+VP[AGR=?a] -> V[+aspect_over_time, SUBCAT=trans, AGR=?a] PP[+aspect_over_time, AGR=?a]
+VP[AGR=?a] -> V[-aspect_over_time, SUBCAT=ditrans, AGR=?a] NP[AGR=?a] PP[-aspect_over_time, AGR=?a]
+VP[AGR=?a] -> V[+aspect_instant, SUBCAT=ditrans, AGR=?a] PP[+aspect_instant, AGR=?a]
+
+
+VP[AGR=?a] -> V[AGR=?a] SBar[AGR=?a]
+VP[AGR=?a] -> V[AGR=?a] Adj[AGR=?a]
+
+SBar[AGR=?a] -> Comp[AGR=?a] S[-INV]
+PP[AGR=?a, -aspect_over_time] -> Prep[-aspect_over_time, AGR=?a] NP[NUM=?n]
+PP[AGR=?a, +aspect_over_time] -> Prep[+aspect_over_time, AGR=?a] NP[NUM=?n]
+
+# ###################
+# Lexical Productions
+# ###################
+
+### Verb Subcatigorization - Past / ?x ###
+V[SUBCAT=clause, AGR=[TENSE=past, NUM=sg]] -> 'thought'
+V[SUBCAT=intrans, AGR=[TENSE=past, NUM=sg]] -> 'was'
+V[-aspect_over_time, +aspect_instant , SUBCAT=ditrans, AGR=[TENSE=past, NUM=sg]] -> 'put' |'reached'
+V[+aspect_instant, +aspect_over_time, SUBCAT=trans, AGR=[TENSE=past, NUM=?n]] -> 'saw' | 'walked'
+
+### Verb Subcatigorization - Present / Singular ###
+V[-AUX, SUBCAT=intrans, AGR=[TENSE=pres, NUM=sg]] -> 'barks' | 'know' | 'knows'
+V[-AUX, +LGD, SUBCAT=trans, PER=3, AGR=[TENSE=pres, NUM=sg]] -> 'knows'
+V[-AUX, SUBCAT=trans, AGR=[TENSE=pres, NUM=sg]] -> 'think' | 'know'
+
+### Verb Subcatigorization - Present / Plural ###
+V[SUBCAT=intrans, AGR=[TENSE=pres, NUM=pl]] -> 'bark'
+
+#Auxilliaries
+V[+AUX, +INV, AGR=[NUM=sg, TENSE=past]] -> 'did'
+V[+AUX, -INV, PER=3, AGR=[NUM=sg, TENSE=pres]] -> 'does'
+
+### Nouns
+Noun[AGR=[NUM=sg]] -> 'dog' | 'book' | 'shelf' | 'summit'
+Noun[AGR=[NUM=pl]] -> 'dogs' | 'cats' | 'minutes'
+
+## Proper Nouns
+PropN[GND=fem, PER=3, AGR=[NUM=?n]] -> 'Mary'
+PropN[GND=masc, PER=3, AGR=[NUM=?n]] -> 'John'
+PropN[GND=neutral, AGR=[NUM=sg]] -> 'Tuesday'
+
+## Singular Reflexive personal pronouns
+Pro[+reflex, GND=fem, PER=3, AGR=[NUM=sg]] -> 'herself'
+Pro[+reflex, GND=masc, PER=3, AGR=[NUM=sg]] -> 'himself'
+
+Comp[GEN=?a] -> 'that'
+Adj[GEN=?a] -> 'interesting'
+
+### Prepositions; act=persistence, inst=instantaneous
+Prep[+aspect_over_time, EVENT=act, TENSE=?t, NUM=?n] -> 'for'
+Prep[+aspect_instant, EVENT=ach, TENSE=?t, NUM=?n] -> 'on'
+
+### Singular determiners
+Det[AGR=[NUM=?n]] -> 'the'
+WDT[AGR=[NUM=?n]] -> 'what'
+
+### Cardinal Numbers
+CD[AGR=[NUM=pl]] -> 'five'
+
+
+
+
+

@@ -1,0 +1,360 @@
+John eats
+exists e.(eating(e) & eater(e,John))
+a student eats
+exists x.(Student(x) & exists e.(eating(e) & eater(e,x)))
+all students eat
+all x.(Student(x) -> exists e.(eating(e) & eater(e,x)))
+John eats a sandwich
+exists z1.(Sandwich(z1) & exists e.(eating(e) & eater(e,John) & eat_thing(e,z1)))
+all students eat or drink
+all x.(Student(x) -> (exists e.(eating(e) & eater(e,x)) | exists e.(drinking(e) & drinker(e,x))))
+John drinks a soda or eats a sandwich
+(exists z2.(Soda(z2) & exists e.(drinking(e) & drinker(e,John) & drink_thing(e,z2))) | exists z3.(Sandwich(z3) & exists e.(eating(e) & eater(e,John) & eat_thing(e,z3))))
+John or Mary eats
+(exists e.(eating(e) & eater(e,John)) | exists e.(eating(e) & eater(e,Mary)))
+a student writes an essay or eats
+exists x.(Student(x) & (exists z4.(Essay(z4) & exists e.(writing(e) & writer(e,x) & write_thing(e,z4))) | exists e.(eating(e) & eater(e,x))))
+every student eats a sandwich or drinks a soda
+all x.(Student(x) -> (exists z5.(Sandwich(z5) & exists e.(eating(e) & eater(e,x) & eat_thing(e,z5))) | exists z6.(Soda(z6) & exists e.(drinking(e) & drinker(e,x) & drink_thing(e,z6)))))
+John eats every sandwich 
+all z7.(Sandwich(z7) -> exists e.(eating(e) & eater(e,John) & eat_thing(e,z7)))
+John eats every sandwich or bagel
+all z9.((Sandwich(z9) | Bagel(z9)) -> exists e.(eating(e) & eater(e,John) & eat_thing(e,z9)))
+nobody eats a bagel
+-P3(\z11.Person(z11))
+a person does not eat
+	
+Jack does not eat or drink 
+	
+no student eats a bagel
+all x.(-Student(x) -> exists z13.(Bagel(z13) & exists e.(eating(e) & eater(e,x) & eat_thing(e,z13))))
+John eats
+exists e.(eating(e) & eater(e,John))
+a student eats
+exists x.(Student(x) & exists e.(eating(e) & eater(e,x)))
+all students eat
+all x.(Student(x) -> exists e.(eating(e) & eater(e,x)))
+John eats a sandwich
+exists z1.(Sandwich(z1) & exists e.(eating(e) & eater(e,John) & eat_thing(e,z1)))
+all students eat or drink
+all x.(Student(x) -> (exists e.(eating(e) & eater(e,x)) | exists e.(drinking(e) & drinker(e,x))))
+John drinks a soda or eats a sandwich
+(exists z2.(Soda(z2) & exists e.(drinking(e) & drinker(e,John) & drink_thing(e,z2))) | exists z3.(Sandwich(z3) & exists e.(eating(e) & eater(e,John) & eat_thing(e,z3))))
+John or Mary eats
+(exists e.(eating(e) & eater(e,John)) | exists e.(eating(e) & eater(e,Mary)))
+a student writes an essay or eats
+exists x.(Student(x) & (exists z4.(Essay(z4) & exists e.(writing(e) & writer(e,x) & write_thing(e,z4))) | exists e.(eating(e) & eater(e,x))))
+every student eats a sandwich or drinks a soda
+all x.(Student(x) -> (exists z5.(Sandwich(z5) & exists e.(eating(e) & eater(e,x) & eat_thing(e,z5))) | exists z6.(Soda(z6) & exists e.(drinking(e) & drinker(e,x) & drink_thing(e,z6)))))
+John eats every sandwich 
+all z7.(Sandwich(z7) -> exists e.(eating(e) & eater(e,John) & eat_thing(e,z7)))
+John eats every sandwich or bagel
+all z9.((Sandwich(z9) | Bagel(z9)) -> exists e.(eating(e) & eater(e,John) & eat_thing(e,z9)))
+nobody eats a bagel
+-\z11.Person(z11)
+a person does not eat
+	
+Jack does not eat or drink 
+	
+no student eats a bagel
+all x.(-Student(x) -> exists z13.(Bagel(z13) & exists e.(eating(e) & eater(e,x) & eat_thing(e,z13))))
+John eats
+exists e.(eating(e) & eater(e,John))
+a student eats
+exists x.(Student(x) & exists e.(eating(e) & eater(e,x)))
+all students eat
+all x.(Student(x) -> exists e.(eating(e) & eater(e,x)))
+John eats a sandwich
+exists z1.(Sandwich(z1) & exists e.(eating(e) & eater(e,John) & eat_thing(e,z1)))
+all students eat or drink
+all x.(Student(x) -> (exists e.(eating(e) & eater(e,x)) | exists e.(drinking(e) & drinker(e,x))))
+John drinks a soda or eats a sandwich
+(exists z2.(Soda(z2) & exists e.(drinking(e) & drinker(e,John) & drink_thing(e,z2))) | exists z3.(Sandwich(z3) & exists e.(eating(e) & eater(e,John) & eat_thing(e,z3))))
+John or Mary eats
+(exists e.(eating(e) & eater(e,John)) | exists e.(eating(e) & eater(e,Mary)))
+a student writes an essay or eats
+exists x.(Student(x) & (exists z4.(Essay(z4) & exists e.(writing(e) & writer(e,x) & write_thing(e,z4))) | exists e.(eating(e) & eater(e,x))))
+every student eats a sandwich or drinks a soda
+all x.(Student(x) -> (exists z5.(Sandwich(z5) & exists e.(eating(e) & eater(e,x) & eat_thing(e,z5))) | exists z6.(Soda(z6) & exists e.(drinking(e) & drinker(e,x) & drink_thing(e,z6)))))
+John eats every sandwich 
+all z7.(Sandwich(z7) -> exists e.(eating(e) & eater(e,John) & eat_thing(e,z7)))
+John eats every sandwich or bagel
+all z9.((Sandwich(z9) | Bagel(z9)) -> exists e.(eating(e) & eater(e,John) & eat_thing(e,z9)))
+nobody eats a bagel
+-\z11.Person(z11)(\x.exists z12.(Bagel(z12) & exists e.(eating(e) & eater(e,x) & eat_thing(e,z12))))
+a person does not eat
+	
+Jack does not eat or drink 
+	
+no student eats a bagel
+all x.(-Student(x) -> exists z13.(Bagel(z13) & exists e.(eating(e) & eater(e,x) & eat_thing(e,z13))))
+John eats
+exists e.(eating(e) & eater(e,John))
+a student eats
+exists x.(Student(x) & exists e.(eating(e) & eater(e,x)))
+all students eat
+all x.(Student(x) -> exists e.(eating(e) & eater(e,x)))
+John eats a sandwich
+exists z1.(Sandwich(z1) & exists e.(eating(e) & eater(e,John) & eat_thing(e,z1)))
+all students eat or drink
+all x.(Student(x) -> (exists e.(eating(e) & eater(e,x)) | exists e.(drinking(e) & drinker(e,x))))
+John drinks a soda or eats a sandwich
+(exists z2.(Soda(z2) & exists e.(drinking(e) & drinker(e,John) & drink_thing(e,z2))) | exists z3.(Sandwich(z3) & exists e.(eating(e) & eater(e,John) & eat_thing(e,z3))))
+John or Mary eats
+(exists e.(eating(e) & eater(e,John)) | exists e.(eating(e) & eater(e,Mary)))
+a student writes an essay or eats
+exists x.(Student(x) & (exists z4.(Essay(z4) & exists e.(writing(e) & writer(e,x) & write_thing(e,z4))) | exists e.(eating(e) & eater(e,x))))
+every student eats a sandwich or drinks a soda
+all x.(Student(x) -> (exists z5.(Sandwich(z5) & exists e.(eating(e) & eater(e,x) & eat_thing(e,z5))) | exists z6.(Soda(z6) & exists e.(drinking(e) & drinker(e,x) & drink_thing(e,z6)))))
+John eats every sandwich 
+all z7.(Sandwich(z7) -> exists e.(eating(e) & eater(e,John) & eat_thing(e,z7)))
+John eats every sandwich or bagel
+all z9.((Sandwich(z9) | Bagel(z9)) -> exists e.(eating(e) & eater(e,John) & eat_thing(e,z9)))
+nobody eats a bagel
+-\Q x.Person(x)(\x.exists z11.(Bagel(z11) & exists e.(eating(e) & eater(e,x) & eat_thing(e,z11))))
+a person does not eat
+	
+Jack does not eat or drink 
+	
+no student eats a bagel
+all x.(-Student(x) -> exists z12.(Bagel(z12) & exists e.(eating(e) & eater(e,x) & eat_thing(e,z12))))
+John eats
+exists e.(eating(e) & eater(e,John))
+a student eats
+exists x.(Student(x) & exists e.(eating(e) & eater(e,x)))
+all students eat
+all x.(Student(x) -> exists e.(eating(e) & eater(e,x)))
+John eats a sandwich
+exists z1.(Sandwich(z1) & exists e.(eating(e) & eater(e,John) & eat_thing(e,z1)))
+all students eat or drink
+all x.(Student(x) -> (exists e.(eating(e) & eater(e,x)) | exists e.(drinking(e) & drinker(e,x))))
+John drinks a soda or eats a sandwich
+(exists z2.(Soda(z2) & exists e.(drinking(e) & drinker(e,John) & drink_thing(e,z2))) | exists z3.(Sandwich(z3) & exists e.(eating(e) & eater(e,John) & eat_thing(e,z3))))
+John or Mary eats
+(exists e.(eating(e) & eater(e,John)) | exists e.(eating(e) & eater(e,Mary)))
+a student writes an essay or eats
+exists x.(Student(x) & (exists z4.(Essay(z4) & exists e.(writing(e) & writer(e,x) & write_thing(e,z4))) | exists e.(eating(e) & eater(e,x))))
+every student eats a sandwich or drinks a soda
+all x.(Student(x) -> (exists z5.(Sandwich(z5) & exists e.(eating(e) & eater(e,x) & eat_thing(e,z5))) | exists z6.(Soda(z6) & exists e.(drinking(e) & drinker(e,x) & drink_thing(e,z6)))))
+John eats every sandwich 
+all z7.(Sandwich(z7) -> exists e.(eating(e) & eater(e,John) & eat_thing(e,z7)))
+John eats every sandwich or bagel
+all z9.((Sandwich(z9) | Bagel(z9)) -> exists e.(eating(e) & eater(e,John) & eat_thing(e,z9)))
+nobody eats a bagel
+-\y x.Person(x)(\x.exists z11.(Bagel(z11) & exists e.(eating(e) & eater(e,x) & eat_thing(e,z11))))
+a person does not eat
+	
+Jack does not eat or drink 
+	
+no student eats a bagel
+all x.(-Student(x) -> exists z12.(Bagel(z12) & exists e.(eating(e) & eater(e,x) & eat_thing(e,z12))))
+John eats
+exists e.(eating(e) & eater(e,John))
+a student eats
+exists x.(Student(x) & exists e.(eating(e) & eater(e,x)))
+all students eat
+all x.(Student(x) -> exists e.(eating(e) & eater(e,x)))
+John eats a sandwich
+exists z1.(Sandwich(z1) & exists e.(eating(e) & eater(e,John) & eat_thing(e,z1)))
+all students eat or drink
+all x.(Student(x) -> (exists e.(eating(e) & eater(e,x)) | exists e.(drinking(e) & drinker(e,x))))
+John drinks a soda or eats a sandwich
+(exists z2.(Soda(z2) & exists e.(drinking(e) & drinker(e,John) & drink_thing(e,z2))) | exists z3.(Sandwich(z3) & exists e.(eating(e) & eater(e,John) & eat_thing(e,z3))))
+John or Mary eats
+(exists e.(eating(e) & eater(e,John)) | exists e.(eating(e) & eater(e,Mary)))
+a student writes an essay or eats
+exists x.(Student(x) & (exists z4.(Essay(z4) & exists e.(writing(e) & writer(e,x) & write_thing(e,z4))) | exists e.(eating(e) & eater(e,x))))
+every student eats a sandwich or drinks a soda
+all x.(Student(x) -> (exists z5.(Sandwich(z5) & exists e.(eating(e) & eater(e,x) & eat_thing(e,z5))) | exists z6.(Soda(z6) & exists e.(drinking(e) & drinker(e,x) & drink_thing(e,z6)))))
+John eats every sandwich 
+all z7.(Sandwich(z7) -> exists e.(eating(e) & eater(e,John) & eat_thing(e,z7)))
+John eats every sandwich or bagel
+all z9.((Sandwich(z9) | Bagel(z9)) -> exists e.(eating(e) & eater(e,John) & eat_thing(e,z9)))
+nobody eats a bagel
+-\x.Person(x)(\x.exists z11.(Bagel(z11) & exists e.(eating(e) & eater(e,x) & eat_thing(e,z11))))
+a person does not eat
+	
+Jack does not eat or drink 
+	
+no student eats a bagel
+all x.(-Student(x) -> exists z12.(Bagel(z12) & exists e.(eating(e) & eater(e,x) & eat_thing(e,z12))))
+John eats
+exists e.(eating(e) & eater(e,John))
+a student eats
+exists x.(Student(x) & exists e.(eating(e) & eater(e,x)))
+all students eat
+all x.(Student(x) -> exists e.(eating(e) & eater(e,x)))
+John eats a sandwich
+exists z1.(Sandwich(z1) & exists e.(eating(e) & eater(e,John) & eat_thing(e,z1)))
+all students eat or drink
+all x.(Student(x) -> (exists e.(eating(e) & eater(e,x)) | exists e.(drinking(e) & drinker(e,x))))
+John drinks a soda or eats a sandwich
+(exists z2.(Soda(z2) & exists e.(drinking(e) & drinker(e,John) & drink_thing(e,z2))) | exists z3.(Sandwich(z3) & exists e.(eating(e) & eater(e,John) & eat_thing(e,z3))))
+John or Mary eats
+(exists e.(eating(e) & eater(e,John)) | exists e.(eating(e) & eater(e,Mary)))
+a student writes an essay or eats
+exists x.(Student(x) & (exists z4.(Essay(z4) & exists e.(writing(e) & writer(e,x) & write_thing(e,z4))) | exists e.(eating(e) & eater(e,x))))
+every student eats a sandwich or drinks a soda
+all x.(Student(x) -> (exists z5.(Sandwich(z5) & exists e.(eating(e) & eater(e,x) & eat_thing(e,z5))) | exists z6.(Soda(z6) & exists e.(drinking(e) & drinker(e,x) & drink_thing(e,z6)))))
+John eats every sandwich 
+all z7.(Sandwich(z7) -> exists e.(eating(e) & eater(e,John) & eat_thing(e,z7)))
+John eats every sandwich or bagel
+all z9.((Sandwich(z9) | Bagel(z9)) -> exists e.(eating(e) & eater(e,John) & eat_thing(e,z9)))
+nobody eats a bagel
+-Person(\x.exists z11.(Bagel(z11) & exists e.(eating(e) & eater(e,x) & eat_thing(e,z11))))
+a person does not eat
+	
+Jack does not eat or drink 
+	
+no student eats a bagel
+all x.(-Student(x) -> exists z12.(Bagel(z12) & exists e.(eating(e) & eater(e,x) & eat_thing(e,z12))))
+John eats
+exists e.(eating(e) & eater(e,John))
+a student eats
+exists x.(Student(x) & exists e.(eating(e) & eater(e,x)))
+all students eat
+all x.(Student(x) -> exists e.(eating(e) & eater(e,x)))
+John eats a sandwich
+exists z1.(Sandwich(z1) & exists e.(eating(e) & eater(e,John) & eat_thing(e,z1)))
+all students eat or drink
+all x.(Student(x) -> (exists e.(eating(e) & eater(e,x)) | exists e.(drinking(e) & drinker(e,x))))
+John drinks a soda or eats a sandwich
+(exists z2.(Soda(z2) & exists e.(drinking(e) & drinker(e,John) & drink_thing(e,z2))) | exists z3.(Sandwich(z3) & exists e.(eating(e) & eater(e,John) & eat_thing(e,z3))))
+John or Mary eats
+(exists e.(eating(e) & eater(e,John)) | exists e.(eating(e) & eater(e,Mary)))
+a student writes an essay or eats
+exists x.(Student(x) & (exists z4.(Essay(z4) & exists e.(writing(e) & writer(e,x) & write_thing(e,z4))) | exists e.(eating(e) & eater(e,x))))
+every student eats a sandwich or drinks a soda
+all x.(Student(x) -> (exists z5.(Sandwich(z5) & exists e.(eating(e) & eater(e,x) & eat_thing(e,z5))) | exists z6.(Soda(z6) & exists e.(drinking(e) & drinker(e,x) & drink_thing(e,z6)))))
+John eats every sandwich 
+all z7.(Sandwich(z7) -> exists e.(eating(e) & eater(e,John) & eat_thing(e,z7)))
+John eats every sandwich or bagel
+all z9.((Sandwich(z9) | Bagel(z9)) -> exists e.(eating(e) & eater(e,John) & eat_thing(e,z9)))
+nobody eats a bagel
+\x.-Person(x)
+a person does not eat
+	
+Jack does not eat or drink 
+	
+no student eats a bagel
+all x.(-Student(x) -> exists z12.(Bagel(z12) & exists e.(eating(e) & eater(e,x) & eat_thing(e,z12))))
+John eats
+exists e.(eating(e) & eater(e,John))
+a student eats
+exists x.(Student(x) & exists e.(eating(e) & eater(e,x)))
+all students eat
+all x.(Student(x) -> exists e.(eating(e) & eater(e,x)))
+John eats a sandwich
+exists z1.(Sandwich(z1) & exists e.(eating(e) & eater(e,John) & eat_thing(e,z1)))
+all students eat or drink
+all x.(Student(x) -> (exists e.(eating(e) & eater(e,x)) | exists e.(drinking(e) & drinker(e,x))))
+John drinks a soda or eats a sandwich
+(exists z2.(Soda(z2) & exists e.(drinking(e) & drinker(e,John) & drink_thing(e,z2))) | exists z3.(Sandwich(z3) & exists e.(eating(e) & eater(e,John) & eat_thing(e,z3))))
+John or Mary eats
+(exists e.(eating(e) & eater(e,John)) | exists e.(eating(e) & eater(e,Mary)))
+a student writes an essay or eats
+exists x.(Student(x) & (exists z4.(Essay(z4) & exists e.(writing(e) & writer(e,x) & write_thing(e,z4))) | exists e.(eating(e) & eater(e,x))))
+every student eats a sandwich or drinks a soda
+all x.(Student(x) -> (exists z5.(Sandwich(z5) & exists e.(eating(e) & eater(e,x) & eat_thing(e,z5))) | exists z6.(Soda(z6) & exists e.(drinking(e) & drinker(e,x) & drink_thing(e,z6)))))
+John eats every sandwich 
+all z7.(Sandwich(z7) -> exists e.(eating(e) & eater(e,John) & eat_thing(e,z7)))
+John eats every sandwich or bagel
+all z9.((Sandwich(z9) | Bagel(z9)) -> exists e.(eating(e) & eater(e,John) & eat_thing(e,z9)))
+nobody eats a bagel
+\x x.-Person(x)
+a person does not eat
+	
+Jack does not eat or drink 
+	
+no student eats a bagel
+all x.(-Student(x) -> exists z12.(Bagel(z12) & exists e.(eating(e) & eater(e,x) & eat_thing(e,z12))))
+John eats
+exists e.(eating(e) & eater(e,John))
+a student eats
+exists x.(Student(x) & exists e.(eating(e) & eater(e,x)))
+all students eat
+all x.(Student(x) -> exists e.(eating(e) & eater(e,x)))
+John eats a sandwich
+exists z1.(Sandwich(z1) & exists e.(eating(e) & eater(e,John) & eat_thing(e,z1)))
+all students eat or drink
+all x.(Student(x) -> (exists e.(eating(e) & eater(e,x)) | exists e.(drinking(e) & drinker(e,x))))
+John drinks a soda or eats a sandwich
+(exists z2.(Soda(z2) & exists e.(drinking(e) & drinker(e,John) & drink_thing(e,z2))) | exists z3.(Sandwich(z3) & exists e.(eating(e) & eater(e,John) & eat_thing(e,z3))))
+John or Mary eats
+(exists e.(eating(e) & eater(e,John)) | exists e.(eating(e) & eater(e,Mary)))
+a student writes an essay or eats
+exists x.(Student(x) & (exists z4.(Essay(z4) & exists e.(writing(e) & writer(e,x) & write_thing(e,z4))) | exists e.(eating(e) & eater(e,x))))
+every student eats a sandwich or drinks a soda
+all x.(Student(x) -> (exists z5.(Sandwich(z5) & exists e.(eating(e) & eater(e,x) & eat_thing(e,z5))) | exists z6.(Soda(z6) & exists e.(drinking(e) & drinker(e,x) & drink_thing(e,z6)))))
+John eats every sandwich 
+all z7.(Sandwich(z7) -> exists e.(eating(e) & eater(e,John) & eat_thing(e,z7)))
+John eats every sandwich or bagel
+all z9.((Sandwich(z9) | Bagel(z9)) -> exists e.(eating(e) & eater(e,John) & eat_thing(e,z9)))
+nobody eats a bagel
+-Person(y2)(\x.exists z11.(Bagel(z11) & exists e.(eating(e) & eater(e,x) & eat_thing(e,z11))))
+a person does not eat
+	
+Jack does not eat or drink 
+	
+no student eats a bagel
+all x.(-Student(x) -> exists z12.(Bagel(z12) & exists e.(eating(e) & eater(e,x) & eat_thing(e,z12))))
+John eats
+exists e.(eating(e) & eater(e,John))
+a student eats
+exists x.(Student(x) & exists e.(eating(e) & eater(e,x)))
+all students eat
+all x.(Student(x) -> exists e.(eating(e) & eater(e,x)))
+John eats a sandwich
+exists z1.(Sandwich(z1) & exists e.(eating(e) & eater(e,John) & eat_thing(e,z1)))
+all students eat or drink
+all x.(Student(x) -> (exists e.(eating(e) & eater(e,x)) | exists e.(drinking(e) & drinker(e,x))))
+John drinks a soda or eats a sandwich
+(exists z2.(Soda(z2) & exists e.(drinking(e) & drinker(e,John) & drink_thing(e,z2))) | exists z3.(Sandwich(z3) & exists e.(eating(e) & eater(e,John) & eat_thing(e,z3))))
+John or Mary eats
+(exists e.(eating(e) & eater(e,John)) | exists e.(eating(e) & eater(e,Mary)))
+a student writes an essay or eats
+exists x.(Student(x) & (exists z4.(Essay(z4) & exists e.(writing(e) & writer(e,x) & write_thing(e,z4))) | exists e.(eating(e) & eater(e,x))))
+every student eats a sandwich or drinks a soda
+all x.(Student(x) -> (exists z5.(Sandwich(z5) & exists e.(eating(e) & eater(e,x) & eat_thing(e,z5))) | exists z6.(Soda(z6) & exists e.(drinking(e) & drinker(e,x) & drink_thing(e,z6)))))
+John eats every sandwich 
+all z7.(Sandwich(z7) -> exists e.(eating(e) & eater(e,John) & eat_thing(e,z7)))
+John eats every sandwich or bagel
+all z9.((Sandwich(z9) | Bagel(z9)) -> exists e.(eating(e) & eater(e,John) & eat_thing(e,z9)))
+nobody eats a bagel
+-\P.exists p.Person(p)
+a person does not eat
+	
+Jack does not eat or drink 
+	
+no student eats a bagel
+all x.(-Student(x) -> exists z12.(Bagel(z12) & exists e.(eating(e) & eater(e,x) & eat_thing(e,z12))))
+John eats
+exists e.(eating(e) & eater(e,John))
+a student eats
+exists x.(Student(x) & exists e.(eating(e) & eater(e,x)))
+all students eat
+all x.(Student(x) -> exists e.(eating(e) & eater(e,x)))
+John eats a sandwich
+exists z1.(Sandwich(z1) & exists e.(eating(e) & eater(e,John) & eat_thing(e,z1)))
+all students eat or drink
+all x.(Student(x) -> (exists e.(eating(e) & eater(e,x)) | exists e.(drinking(e) & drinker(e,x))))
+John drinks a soda or eats a sandwich
+(exists z2.(Soda(z2) & exists e.(drinking(e) & drinker(e,John) & drink_thing(e,z2))) | exists z3.(Sandwich(z3) & exists e.(eating(e) & eater(e,John) & eat_thing(e,z3))))
+John or Mary eats
+(exists e.(eating(e) & eater(e,John)) | exists e.(eating(e) & eater(e,Mary)))
+a student writes an essay or eats
+exists x.(Student(x) & (exists z4.(Essay(z4) & exists e.(writing(e) & writer(e,x) & write_thing(e,z4))) | exists e.(eating(e) & eater(e,x))))
+every student eats a sandwich or drinks a soda
+all x.(Student(x) -> (exists z5.(Sandwich(z5) & exists e.(eating(e) & eater(e,x) & eat_thing(e,z5))) | exists z6.(Soda(z6) & exists e.(drinking(e) & drinker(e,x) & drink_thing(e,z6)))))
+John eats every sandwich 
+all z7.(Sandwich(z7) -> exists e.(eating(e) & eater(e,John) & eat_thing(e,z7)))
+John eats every sandwich or bagel
+all z9.((Sandwich(z9) | Bagel(z9)) -> exists e.(eating(e) & eater(e,John) & eat_thing(e,z9)))
+nobody eats a bagel
+-Person(p3)
+a person does not eat
+	
+Jack does not eat or drink 
+	
+no student eats a bagel
+all x.(-Student(x) -> exists z12.(Bagel(z12) & exists e.(eating(e) & eater(e,x) & eat_thing(e,z12))))

@@ -1,0 +1,11 @@
+CAT:PossPro;NUM:pl;PERSON:3;GENDER:?g;ORTHS:their|Their
+CAT:PRP;NUM:sg;PERSON:3;GENDER:?g;ORTHS:this
+CAT:PRP_OBJ;NUM:pl;PERSON:3;GENDER:animate;ORTHS:them
+CAT:PRP_OBJ;NUM:sg;PERSON:3;GENDER:animate;ORTHS:them
+CAT:PRP_SBJ;NUM:pl;PERSON:3;GENDER:animate;ORTHS:They
+CAT:PRP_SBJ;NUM:sg;PERSON:3;GENDER:animate;ORTHS:They
+CAT:NNP;NUM:sg;PERSON:?p;GENDER:animate;ORTHS:Dr|Jose|Villadangos
+CAT:NN;NUM:sg;PERSON:?p;GENDER:animate;ORTHS:mouse|researcher
+CAT:NN;NUM:sg;PERSON:?p;GENDER:inanimate;ORTHS:body|case|immunity|malaria|pathogen|research|response|sepsis|system|type|vaccine
+CAT:NNS;NUM:pl;PERSON:?p;GENDER:animate;ORTHS:cells|humans|mice|Scientists
+CAT:NNS;NUM:pl;PERSON:?p;GENDER:inanimate;ORTHS:fragments|infections

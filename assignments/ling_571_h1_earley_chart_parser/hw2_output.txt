@@ -1,0 +1,146 @@
+what is the cheapest one way flight from columbus to indianapolis .
+Number of parses: 0
+
+is there a flight from memphis to los angeles .
+Number of parses: 0
+
+please show me the flights from chicago to detroit that arrive at six p.m. next tuesday .
+Number of parses: 0
+
+how much does first class on that flight cost and how much does coach on that flight cost .
+Number of parses: 0
+
+can you tell me about the flights from saint petersburg to toronto again .
+Number of parses: 0
+
+i would like to find a flight from charlotte to las vegas .
+Number of parses: 0
+
+how far is it from the airport to the city .
+Number of parses: 0
+
+can i have the fare .
+Number of parses: 0
+
+show availability .
+Number of parses: 0
+
+show me northwest flights to detroit .
+Number of parses: 0
+
+show the flights .
+Number of parses: 0
+
+prices .
+Number of parses: 0
+
+list those flights that stop over in salt lake city .
+Number of parses: 0
+
+what is e w r .
+Number of parses: 0
+
+please list the flights leaving newark stopping over in seattle for approximately five hours and then on to san francisco .
+Number of parses: 0
+
+i want to leave before noon .
+Number of parses: 0
+
+how long is the stop in dallas on flight d l nine thirty one .
+Number of parses: 0
+
+i want first class on flight one one one nine .
+Number of parses: 0
+
+please show me all flights from montreal to las vegas .
+Number of parses: 0
+
+i need the shortest evening flight from tampa to cincinnati .
+Number of parses: 0
+
+how far is the airport from new york 's la guardia to downtown .
+Number of parses: 0
+
+how much is the fare limousine san francisco to downtown .
+Number of parses: 0
+
+i need a flight from philadelphia to westchester county .
+Number of parses: 0
+
+what flights leave los angeles arriving in minneapolis .
+Number of parses: 0
+
+what is the cheapest ticket from memphis to miami .
+Number of parses: 0
+
+what flights leave boston to pittsburgh .
+Number of parses: 0
+
+what meals are served on flight h p five four .
+Number of parses: 0
+
+what flights leave las vegas to oakland .
+Number of parses: 0
+
+show me the airlines and flight numbers .
+Number of parses: 0
+
+what airlines fly from toronto to detroit .
+Number of parses: 0
+
+i 'd like an afternoon flight .
+Number of parses: 0
+
+what is the fare .
+Number of parses: 0
+
+i 'd like to leave before eight o'clock at night .
+Number of parses: 0
+
+i 'd like to leave on a saturday .
+Number of parses: 0
+
+does delta fly to boston from denver .
+Number of parses: 0
+
+list flights from cleveland .
+Number of parses: 0
+
+oakland to salt lake city .
+Number of parses: 0
+
+milwaukee to detroit .
+Number of parses: 0
+
+indianapolis to seattle .
+Number of parses: 0
+
+list round trips .
+Number of parses: 0
+
+list saturday flights .
+Number of parses: 0
+
+what type of aircraft is used on a flight from cleveland to dallas that leaves before noon .
+Number of parses: 0
+
+please tell me the round trip cost for these flights .
+Number of parses: 0
+
+what are the costs .
+Number of parses: 0
+
+orlando to kansas city and then to minneapolis .
+Number of parses: 0
+
+i would like a flight from orlando to kansas city .
+Number of parses: 0
+
+which flights use a large plane .
+Number of parses: 0
+
+for american airlines i need round trip airfare from new york to san diego .
+Number of parses: 0
+
+
+Average number of parses: 0.000000

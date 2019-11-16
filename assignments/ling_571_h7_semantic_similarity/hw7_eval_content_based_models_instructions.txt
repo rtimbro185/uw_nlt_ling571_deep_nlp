@@ -1,0 +1,95 @@
+
+Ling 571 - Deep Processing Techniques for NLP
+Winter 2017 
+Homework #7: Due February 21, 2017, 23:45 
+
+Goals
+Through this assignment you will:
+	• Investigate issues and design of distributional semantic models.
+	• Analyze the effects of different context sizes as well as association measures in distributional similarity models.
+	• Evaluate distributional models relative to human assessments.
+Background
+Please review the class slides and readings in the textbook on distributional semantics and models, as well as the detailed assignment notes in HW7.pdf. You may implement the assignment in whatever language you choose, provided that it runs on the CLMS cluster. In some cases below, Python functions are referenced, but you can use alternate implementations in other languages if you so choose. The count-based and word2vec models are to be implemented separately, so that you may do the more extensive coding required for the count-based distributional model in your preferred programming language and then use the Python-based gensim package for the word2vec implementation.
+Creating and Evaluating Count-based Models of Distributional Semantic Similarity
+Implement a program to create and evaluate a distributional model of word similarity based on local context term cooccurrence. Your program should:
+	• Read in a corpus that will form the basis of the distributional model and perform basic preprocessing.
+		○ All words should be lowercase.
+		○ Punctuation should removed.
+	• For each word in the corpus:
+		○ Create a vector representation based on word cooccurrence in a specified window around the word.
+		○ Each element in the vector should receive weight according to a specified weighting
+	• Read in a file of human judgments of similarity between pairs of words.
+	• For each word pair in the file:
+		○ For each word in the word pair:
+			§ Print the word and its ten (10) highest weighted features (words) and their weights, in the form:
+word feature1:weight1 feature2:weight2 ....
+		○ Compute the similarity between the two words, based on cosine similarity
+		○ Print out the similarity as: wd1,wd2:similarity
+	• Lastly, compute and print the Spearman correlation between the similarity scores you have computed and the human-generated similarity scores in the provided file as:
+Correlation:computed_correlation.
+You may use any available software for computing the correlation. In Python, you can use spearmanr from scipy.stats.stats.
+Programming
+Create a program hw7_dist_similarity.{py|pl|etc} that implements the creation and evaluation of the distributional similarity model as described above and invoked as: 
+ hw7_dist_similarity.{py|pl|etc} <window> <weighting> <judgment_filename> <output_filename>, where:
+	• <window>: An integer specifying the size of the context window for your model. For a window value of 2, the window should span the two words before and the two words after the current word.
+	• <weighting>: A string specifying the weighting scheme to apply: "FREQ" or "PMI", where:
+		○ FREQ: Refers to "term frequency", the number of times the word appeared in the context of the target
+		○ PMI: (Positive) Point-wise Mutual Information: A variant of PMI where negative association scores are removed. Please see the homework slides for further information on implementation.
+	• <judgment_filename>: The name of the input file holding human judgments of the pairs of words and their similarity to evaluate against, mc_similarity.txt. Each line is of the form:
+wd1,wd2,similarity_score
+	• <output_filename>: The name of the output file with the results of computing similarities and correlations over the word pairs. The file name should identify the configuration under which it was run, as in:
+hw7_sim_<window>_<weighting>_output.txt,
+e.g. hw7_sim_30_FREQ_output.txt would hold the results of running the bag of words model with context window of 30 and term frequency weights.
+In this assignment, you should use the Brown corpus provided with NLTK in /corpora/nltk/nltk-data/corpora/brown/ as the source of cooccurrence information. The file is white-space tokenized, but all tokens are of the form "word/POS". If you choose to use NLTK, you may use the Brown corpus reader as in:
+brown_words = list(nltk.corpus.brown.words())
+Comparison to Continuous Bag of Words (CBOW) using Word2Vec
+Implement a program to evaluate a predictive CBOW distributional model of word similarity using Word2Vec. Your program should:
+	• Read in a corpus that will form the basis of the predictive CBOW distributional model and perform basic preprocessing.
+		○ All words should be lowercase.
+		○ Punctuation should removed.
+	• Build a continuous bag of words model using a standard implementation package, such as gensim's word2vec
+	• Read in a file of human judgments of similarity between pairs of words.
+	• For each word pair in the file:
+		○ Compute the similarity between the two words, using the word2vec model
+		○ Print out the similarity as: wd1,wd2:similarity
+	• Lastly, compute and print the Spearman correlation between the similarity scores you have computed and the human-generated similarity scores in the provided file as:
+Correlation:computed_correlation.
+You may use any available software for computing the correlation. In Python, you can use spearmanr from scipy.stats.stats.
+Programming #2
+Create a program hw7_cbow_similarity.{py|pl|etc} that implements the creation and evaluation of the Continuous Bag-of-Words similarity model as described above and invoked as: 
+ hw7_cbow_similarity.{py|pl|etc} <window> <judgment_filename> <output_filename>, where:
+	• <window>: An integer specifying the size of the context window for your model. For a window value of 2, the window should span the two words before and the two words after the current word.
+	• <judgment_filename>: The name of the input file holding human judgments of the pairs of words and their similarity to evaluate against, mc_similarity.txt. Each line is of the form:
+wd1,wd2,similarity_score
+	• <output_filename>: The name of the output file with the results of computing similarities and correlations over the word pairs. The file name should identify the configuration under which it was run, as in:
+hw7_sim_<window>_CBOW_output.txt,
+e.g. hw7_sim_30_CBOW_output.txt would hold the results of running the Continuous Bag of Words model with context window of 30.
+Files
+Test and Example Data Files
+Aside from the Brown corpus, all files related to this assignment may be found on patas in /dropbox/16-17/571/hw7/, as below:
+	• mc_similarity.txt: These are the pairs of words whose similarity is to be evaluated under each of your models, along with human similarity judgments from [Miller and Charles, 1991]. Each line is of the form:
+wd1,wd2,similarity_score
+	• example_similarity_output.txt: This file holds an example output file with term frequency weights and no pre-processing.
+Submission Files
+	• hw7_dist_similarity.{py|pl|etc}: Program which implements and evaluates your count-based distributional similarity model.
+	• hw7_cbow_similarity.{py|pl|etc}: Program which implements and evaluates the word2vec similarity model.
+	• hw7_sim_2_FREQ_output.txt: Output of running your program with window=2 and weighting=FREQ.
+	• hw7_sim_2_PMI_output.txt: Output of running your program with window=2 and weighting=PMI.
+	• hw7_sim_10_PMI_output.txt: Output of running your program with window=10 and weighting=PMI.
+	• hw7_sim_2_CBOW_output.txt: Output of running your hw7_cbow_similarity.* program with window=2 using word2vec.
+	• hw7.cmd: Condor file which drives your distributional similarity program (hw7_dist_similarity.{py|pl|etc}) with window=2 and weighting=FREQ. All other configurations can be run by you in advance and the results stored in files as specified above.
+		○ Your program must run on patas using:
+$ condor_submit hw7.cmd
+Please see the CLMS wiki pages on the basics of using the condor cluster.
+All files created by the condor run should appear in the top level of the directory.
+	• readme.{txt|pdf}: Write-up file
+		○ This file should describe and discuss your work on this assignment. Include problems you came across and how (or if) you were able to solve them, any insights, special features, and what you learned. Give examples if possible. If you were not able to complete parts of the project, discuss what you tried and/or what did not work. This will allow you to receive maximum credit for partial work.
+In particular, you should discuss the effects of window size, weighting, and model on the quality of the similarity model, as captured by the correlation between your automatically calculated similarity and human judgments.
+	• hw7.tar: Your hand-in file
+		○ Use the tar command to build a single hand-in file, named hw#.tar where # is the number of the homework assignment and containing all the material necessary to test your assignment. Your hw7.cmd should be at the top level of whatever directory structure you are using.
+For example, in your top-level directory, run:
+$ tar cvf hw7.tar *
+Handing in your work
+All homework should be handed in using the class CollectIt.
+
+From <http://courses.washington.edu/ling571/ling571_WIN2017/hw/hw7/hw7.html> 
