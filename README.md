@@ -18,8 +18,6 @@ This course covers algorithms for using precision grammars to associate deep or 
 
 
 
-Course Schedule:
-
-![Schedule](./images/schedule.png)
+![UW_NLT_Certificate](./images/UW_NLT_Certificate_RyanTimbrook.png)
 
 University of Washington, Masters of Computational Linguistics - LING 571 - Deep Processing Techniques for NLP
